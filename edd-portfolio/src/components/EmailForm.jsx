@@ -1,9 +1,37 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const EmailForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceKey = import.meta.env.VITE_SERVICE_ID;
+    const templateId = import.meta.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: "Edd Oliver",
+      message: message
+    };
+
+    emailjs
+      .send(serviceKey, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully", response);
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+  };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
