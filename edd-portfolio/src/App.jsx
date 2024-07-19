@@ -63,7 +63,7 @@ function App() {
               I'm Edd Oliver Verzosa
             </h1>
             <h2 className="section-padding  font-size">
-              Aspiring Web Developer
+              Full-Stack Web Developer
             </h2>
             <img src={eddImage} alt="Edd's photo" className="profile-photo " />
           </header>
@@ -73,15 +73,15 @@ function App() {
           <div className="about-me">
             <h1 className="section-name padding">About Me</h1>
             <p className="section-padding font-size-about">
-              As an aspiring web developer with over 11 years of experience as
-              an Electrical Engineer, I bring a robust background in low voltage
-              to high voltage power supply systems across various sectors
-              including commercial, industrial, infrastructure, and oil and gas
-              power plants. My expertise spans testing and commissioning,
-              maintenance, and construction within these complex environments.
-              Now, I'm channeling my analytical skills and problem-solving
-              mindset into mastering web development to expand my skill set and
-              contribute to the digital landscape.
+              A full-stack web developer with over 11 years of experience as an
+              Electrical Engineer, I bring a robust background in low voltage to
+              high voltage power supply systems across various sectors including
+              commercial, industrial, infrastructure, and oil and gas power
+              plants. My expertise spans testing and commissioning, maintenance,
+              and construction within these complex environments. Now, I'm
+              channeling my analytical skills and problem-solving mindset into
+              mastering web development to expand my skill set and contribute to
+              the digital landscape.
             </p>
             <div className="container-hire-resume">
               <a href="mailto:edd.oliver.verzosa@gmail.com">
