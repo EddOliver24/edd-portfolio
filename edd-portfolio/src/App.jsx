@@ -1,9 +1,6 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import cssImage from "./assets/img/css.jpg";
 import eddImage from "./assets/img/edd.jpg";
 import logoImage from "./assets/img/edd-high-resolution-logo-transparent.png";
-import edcImage from "./assets/img/electrical-distribution-company.png";
 import fbImage from "./assets/img/fb.png";
 import figmaImage from "./assets/img/figma.png";
 import gitlabImage from "./assets/img/gitlab.png";
@@ -12,12 +9,13 @@ import instagramImage from "./assets/img/instagram.png";
 import jsImage from "./assets/img/js.jpg";
 import linkedinImage from "./assets/img/linkedin.png";
 import mongoDBImage from "./assets/img/mongoDB.png";
-import mysqlImage from "./assets/img/mysql.png";
 import nodejsImage from "./assets/img/nodejs.png";
-import oesImage from "./assets/img/online-electrical-shop.png";
-import oecImage from "./assets/img/online-electric-calculator.png";
-import phpImage from "./assets/img/php.png";
-import solarImage from "./assets/img/solar.png";
+import reactjsImage from "./assets/img/reactjs.png";
+import expressjsImage from "./assets/img/expressjs.jpg";
+import alignAppImage from "./assets/img/align-mern-app.png";
+import lendingAppImage from "./assets/img/lending-mern-app.png";
+import pokidexAppImage from "./assets/img/pokidex-app.png";
+import todoAppImage from "./assets/img/todo-list-app.png";
 import { useState } from "react";
 import EmailForm from "./components/EmailForm";
 import "./App.css";
@@ -29,35 +27,14 @@ function App() {
   };
   return (
     <>
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
       <div>
-        <section className="main-navigation">
+        <section className="main-navigation fixed top-0 left-0 w-full z-50">
           <header className="navigation">
             <section className="navigation-logo">
               <img src={logoImage} alt="edd's logo" className="logo" />
             </section>
             <button className="hamburger" onClick={toggleMenu}>
               &#9776;{" "}
-              {/* This is a simple hamburger icon. You can replace it with an SVG or font icon */}
             </button>
             <nav className={`navigation-links ${menuOpen ? "open" : ""}`}>
               {" "}
@@ -110,7 +87,7 @@ function App() {
               <a href="mailto:edd.oliver.verzosa@gmail.com">
                 <h2 className="color-fill">Hire Me</h2>
               </a>
-              <a href="pdf/VERZOSA, Edd Oliver - Electrical Engineer.pdf">
+              <a href="/EDD OLIVER VERZOSA_WEBDEV_RESUME_2024.pdf" download>
                 <h2 className="border-box">Download Resume</h2>
               </a>
             </div>
@@ -132,6 +109,11 @@ function App() {
                 <img className="sub-skill-logo" src={jsImage} alt="JS logo" />
                 <img
                   className="sub-skill-logo"
+                  src={reactjsImage}
+                  alt="ReactJs logo"
+                />
+                <img
+                  className="sub-skill-logo"
                   src={figmaImage}
                   alt="Figma logo"
                 />
@@ -145,7 +127,11 @@ function App() {
                   src={nodejsImage}
                   alt="NodeJS logo"
                 />
-                <img className="sub-skill-logo" src={phpImage} alt="PHP logo" />
+                <img
+                  className="sub-skill-logo"
+                  src={expressjsImage}
+                  alt="ExpressJS logo"
+                />
               </div>
             </section>
             <section className="database">
@@ -156,11 +142,6 @@ function App() {
                   src={mongoDBImage}
                   alt="MongoDB logo"
                 />
-                <img
-                  className="sub-skill-logo"
-                  src={mysqlImage}
-                  alt="MySQL logo"
-                />
               </div>
             </section>
           </div>
@@ -169,45 +150,117 @@ function App() {
         <section>
           <div className="projects">
             <h1 className="section-name padding projects-main">PROJECTS</h1>
-            <section className="project-distribution">
+            <section className="project-distribution mb-10">
               <img
-                src={edcImage}
-                alt="electric cooperative logo"
+                src={alignAppImage}
+                alt="align mern app logo"
                 className="project-logo"
               />
-              <h2 className="project-padding font-size-project">
-                Electrical Distribution Web Design
+              <h2 className="project-padding font-size-project -mb-6 mt-2">
+                Align App - Event Management System
               </h2>
+              <div className="button-group flex space-x-8 md:space-x-32 mt-2">
+                <a
+                  href="https://align-mern-app.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-secondary-100 text-white px-4 py-2 rounded text-sm lg:text-xl transform transition-transform duration-300 hover:scale-110"
+                >
+                  View Demo
+                </a>
+                <a
+                  href="https://github.com/EddOliver24/align-mern-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded text-sm lg:text-xl border-2 border-secondary-100 transform transition-transform duration-300 hover:scale-110"
+                >
+                  View Code
+                </a>
+              </div>
             </section>
-            <section className="project-solar">
+            <section className="project-solar  mb-10">
               <img
-                src={solarImage}
-                alt="solar company logo"
+                src={lendingAppImage}
+                alt="lending mern app logo"
                 className="project-logo"
               />
-              <h2 className="project-padding font-size-project">
-                Solar Energy Web Design
+              <h2 className="project-padding font-size-project -mb-6 mt-2">
+                Micro-Scale Lending App
               </h2>
+              <div className="button-group flex space-x-8 md:space-x-32 mt-2">
+                <a
+                  href="https://lending-app-sandy.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-secondary-100 text-white px-4 py-2 rounded text-sm lg:text-xl transform transition-transform duration-300 hover:scale-110"
+                >
+                  View Demo
+                </a>
+                <a
+                  href="https://github.com/EddOliver24/lending-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded text-sm lg:text-xl border-2 border-secondary-100 transform transition-transform duration-300 hover:scale-110"
+                >
+                  View Code
+                </a>
+              </div>
             </section>
-            <section className="project-calculator">
+            <section className="project-calculator mb-10">
               <img
-                src={oecImage}
-                alt="electric bill calculator"
+                src={pokidexAppImage}
+                alt="pokidex app logo"
                 className="project-logo"
               />
-              <h2 className="project-padding font-size-project">
-                Online Electric Bill Calculator
+              <h2 className="project-padding font-size-project -mb-6 mt-2">
+                Simple Pokidex App
               </h2>
+              <div className="button-group flex space-x-8 md:space-x-32 mt-2">
+                <a
+                  href="https://pokidex-app.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-secondary-100 text-white px-4 py-2 rounded text-sm lg:text-xl transform transition-transform duration-300 hover:scale-110"
+                >
+                  View Demo
+                </a>
+                <a
+                  href="https://github.com/EddOliver24/pokidex-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded text-sm lg:text-xl border-2 border-secondary-100 transform transition-transform duration-300 hover:scale-110"
+                >
+                  View Code
+                </a>
+              </div>
             </section>
-            <section className="project-shop">
+            <section className="project-shop mb-10">
               <img
-                src={oesImage}
-                alt="electric bill calculator"
+                src={todoAppImage}
+                alt="todo app logo"
                 className="project-logo"
               />
-              <h2 className="project-padding font-size-project">
-                Online Electrical Shop
+              <h2 className="project-padding font-size-project -mb-6 mt-2">
+                Todo App
               </h2>
+              <div className="button-group flex space-x-8 md:space-x-32 mt-2">
+                <a
+                  href="https://todo-app-lime-two.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-secondary-100 text-white px-4 py-2 rounded text-sm lg:text-xl transform transition-transform duration-300 hover:scale-110"
+                >
+                  View Demo
+                </a>
+                <a
+                  href="https://github.com/EddOliver24/todo-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded text-sm lg:text-xl border-2 border-secondary-100 transform transition-transform duration-300 hover:scale-110"
+                >
+                  View Code
+                </a>
+              </div>
             </section>
           </div>
           <div className="partition" id="questions"></div>
