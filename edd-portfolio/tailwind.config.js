@@ -11,6 +11,7 @@ export default {
           300: "#F6E7D8",
           400: "#E13F2A",
           500: "#303030"
+
         },
         tertiary: "#0D0D0B"
       },

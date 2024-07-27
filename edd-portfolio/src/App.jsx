@@ -322,6 +322,7 @@ function App() {
                   className="w-12 h-12 border-2 border-secondary-500 p-1 rounded-xl"
                 ></img>
               </div>
+
               <div className="button-group flex space-x-8 md:space-x-32 mt-2">
                 <a
                   href="https://pokidex-app.vercel.app/"
@@ -367,6 +368,7 @@ function App() {
                   className="w-12 h-12 border-2 border-secondary-500 p-1 rounded-xl"
                 ></img>
               </div>
+
               <div className="button-group flex space-x-8 md:space-x-32 mt-2">
                 <a
                   href="https://todo-app-lime-two.vercel.app/"
@@ -381,6 +383,7 @@ function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded text-sm lg:text-xl border-2 border-secondary-100 transform transition-transform duration-300 hover:scale-110 bg-secondary-500"
+
                 >
                   View Code
                 </a>
